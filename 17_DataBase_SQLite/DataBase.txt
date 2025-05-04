@@ -1,0 +1,18 @@
+Database:
+- Hierarchical
+- Red
+- Transaccional
+- Relational
+- Documental
+- Oriented to objects
+- Deductive
+
+Relational Database
+- Based on the idea of create relationships
+- Between logical data sets.
+- Every relation is a table
+- Compose of register (row or tupple)
+- and fields ( columns )
+
+
+SQL: Structured Query Lenguage

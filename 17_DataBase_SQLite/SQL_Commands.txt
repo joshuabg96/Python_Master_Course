@@ -1,0 +1,42 @@
+SQL Commands used with sqlite3 in Python
+
+1. CREATE TABLE <name> ( <column1, column2,..., columnN )Define a new table in a DB
+Example:
+
+CREATE TABLE users (
+         dni VARCHAR(9) PRIMARY KEY,
+         name VARCHAR(100),
+         age INTEGER,
+         email VARCHAR(100)
+     )
+
+CREATE TABLE products (
+         id INTEGER PRIMARY KEY AUTOINCREMENT,
+         name VARCHAR(100),
+         brand INTEGER,
+         price FLOAT NOT NULL
+     )
+
+
+2. INSERT INTO: Insert new registers in a table
+Example:
+INSERT INTO users VALUES ('Hector', 27, 'hector@example.com')
+INSERT INTO products VALUES (null, 'Keyboard', 'Logitech', 19.95)
+
+
+3. INSERT INTO (using executemany): Insert multiple new registers:
+Example:
+INSERT INTO users VALUES (?, ?, ?, ?)
+
+
+4. SELECT * FROM <table> : Get all the registers of a table
+Example:
+SELECT * FROM users
+
+5. fetchone() / fetchall(): 
+fetchone: get only one result
+fetchall: get all the result of the table
+
+6. connection.commit(): Save the changes done at the Data base
+
+7. connection.close() : Close the connection with the data base

@@ -19,5 +19,5 @@ patterns = ["h[a-z]la", "h[0-9]la", '[A-z]{4}', "[A-z][A-z0-9]{3}"]
 search(patterns, text)
 
 text = "Este curso de puthon 3 se publicó en el año 2016"
-patterns = [r'\d', r'\d+']
+patterns = [r'\d', r'\d+', r'\D', r'\D+']
 search(patterns, text)

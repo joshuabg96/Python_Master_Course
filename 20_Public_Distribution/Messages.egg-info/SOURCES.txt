@@ -1,0 +1,10 @@
+setup.py
+test.py
+Bye/Bye.py
+Bye/__init__.py
+Hi/Hi.py
+Hi/__init__.py
+Messages.egg-info/PKG-INFO
+Messages.egg-info/SOURCES.txt
+Messages.egg-info/dependency_links.txt
+Messages.egg-info/top_level.txt

@@ -1,0 +1,53 @@
+pipenv run django-admin strartproject [Project name]: Create a new django project
+
+pipenv run python manage.py runserver: start the django server you can access in a broswer with the direccion show after run the command
+
+you can add at pipfile of the virtual enviroment to have a quick access to run server command
+[scripts]
+server = "python manage.py runserver"
+
+After execute python manage.py runserver the server is running, so you can access to it with a browser and using the address http://127.0.0.1:8000/ if this is not working see the cmd that you are using and you are going to see the server where it started.
+
+
+if you want to start admin resources you have to write the following
+[address]/admin
+
+
+Creating APPs
+- To create a new app we can use pipenv run or python manage.py startapp [AppName] if we are at pipenv shell
+- After create the new app we have to added to settings.py / Installed_APPS and add one line with the name of the app in this case 'blog'
+
+Django Models
+- Inside the new app blog we have a models.py file where we can add all the models that we are creating
+- After add somethign in the models we are going to run the following command
+    - pipenv run python management.py makemigrations
+- This will create the model of the class that you are configurating
+- After create the model we have to apply the changes with the follogin command
+    - pipenv run python management.py migrate
+- If we did a change and we want to make the migrations for an specific app we can use the following command
+    - pipenv run python management.py makemigrations [app]
+- And we apply the changes with the command
+    - pipenv run python management.py migrate [app]
+
+
+
+Django admin
+- Add an admin user and password with the following command
+    - pipenv run python management.py createsuperuser
+- To add the blog admin panel for our app we have to modify the admin.py file from blog folder
+    - import the model file and the class
+    - Add the class with the following line
+        - admin.site.register([Your_app])
+
+Django shell
+- To access to shell we can use the following command
+    - pipenv run python manage.py shell
+- Here we can have some modifications or see the information without the need of a browser
+
+Views and urls (Front - End)
+- We have to create a view at blogs / views.py
+    - We have to create the response for the request
+- After that we have to create the url at urls.py
+    - We have to create a path and add the response that we created
+
+
